@@ -15,6 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateProfile" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Documents" />
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".PetImages"></activity>
     </application>
 
 </manifest>
