@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateProfile" />
+        <activity
+            android:name=".CreateProfile"
+            android:label="Create A Profile" />
         <activity android:name=".Profile" />
         <activity android:name=".Documents" />
         <activity
