@@ -1,13 +1,17 @@
 package com.example.jennykuma.peticularme;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -38,25 +42,29 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         TextView petInfo = (TextView)findViewById(R.id.pet_info);
 
         EditText petName = (EditText)findViewById(R.id.pet_name);
-        petBirthday = (EditText)findViewById(R.id.pet_birthday);
-
+        EditText petBirthday = (EditText)findViewById(R.id.pet_birthday);
+        RadioButton petMale = (RadioButton)findViewById(R.id.radioMale);
+        RadioButton petFemale = (RadioButton)findViewById(R.id.radioFemale);
+        TextView genderLabel = (TextView)findViewById(R.id.gender_label);
 
         addProfilePic.setTypeface(roboto);
         petInfo.setTypeface(roboto);
         petName.setTypeface(roboto);
         petBirthday.setTypeface(roboto);
+        petMale.setTypeface(roboto);
+        petFemale.setTypeface(roboto);
+        genderLabel.setTypeface(roboto);
 
         getBirthday();
-
     }
 
     private void getBirthday(){
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        findViewById();
+        findViewsById();
         setDateTimeField();
     }
 
-    private void findViewById(){
+    private void findViewsById(){
         petBirthday = (EditText)findViewById(R.id.pet_birthday);
         petBirthday.setInputType(InputType.TYPE_NULL);
     }
@@ -65,6 +73,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         petBirthday.setOnClickListener(this);
 
         Calendar newCalendar = Calendar.getInstance();
+
         datePickerDialog = new DatePickerDialog(this, new OnDateSetListener(){
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth){
                 Calendar newDate = Calendar.getInstance();
@@ -75,6 +84,9 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
-    public void onClick(View v){
+    public void onClick(View view){
+        if(view == petBirthday){
+            datePickerDialog.show();
+        }
     }
 }
