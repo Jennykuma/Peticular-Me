@@ -51,6 +51,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         RadioButton petFemale = (RadioButton)findViewById(R.id.radioFemale);
         TextView genderLabel = (TextView)findViewById(R.id.gender_label);
         TextView breedLabel = (TextView)findViewById(R.id.breed_label);
+        EditText petDescription = (EditText)findViewById(R.id.pet_description);
 
         addProfilePic.setTypeface(roboto);
         petInfo.setTypeface(roboto);
@@ -60,6 +61,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         petFemale.setTypeface(roboto);
         genderLabel.setTypeface(roboto);
         breedLabel.setTypeface(roboto);
+        petDescription.setTypeface(roboto);
 
         getBirthday();
         getBreed();
