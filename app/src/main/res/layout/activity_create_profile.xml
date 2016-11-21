@@ -127,6 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginBottom="15dp"
         android:layout_below="@+id/pet_birthday"
         android:layout_alignLeft="@+id/addProfPic_text"
         android:layout_alignStart="@+id/addProfPic_text"
@@ -136,19 +137,46 @@
             android:id="@+id/radioMale"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Male"
             android:layout_alignLeft="@+id/addProfPic_text"
-            android:layout_alignStart="@+id/addProfPic_text" />
+            android:layout_alignStart="@+id/addProfPic_text"
+
+            android:text="Male" />
 
         <RadioButton
             android:id="@+id/radioFemale"
             android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:text="Female"
             android:layout_below="@+id/pet_birthday"
             android:layout_centerHorizontal="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+
+            android:text="Female" />
 
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/breed_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text=" Breed:"
+        android:textSize="18dp"
+
+        android:layout_alignLeft="@+id/pet_birthday"
+        android:layout_alignStart="@+id/pet_birthday"
+        android:layout_below="@+id/gender_label"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/breed_list"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_alignBottom="@+id/breed_label"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/addProfPic_text"
+        android:layout_alignStart="@+id/addProfPic_text" />
+
 
 </RelativeLayout>

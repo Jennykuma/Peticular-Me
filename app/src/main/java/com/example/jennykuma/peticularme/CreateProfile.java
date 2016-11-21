@@ -8,10 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -24,12 +26,14 @@ import android.app.DatePickerDialog.OnDateSetListener;
 import android.view.Menu;
 import android.view.View.OnClickListener;
 
+import org.w3c.dom.Text;
+
 public class CreateProfile extends AppCompatActivity implements View.OnClickListener {
 
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
-
     private EditText petBirthday;
+    private String[] breeds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         RadioButton petMale = (RadioButton)findViewById(R.id.radioMale);
         RadioButton petFemale = (RadioButton)findViewById(R.id.radioFemale);
         TextView genderLabel = (TextView)findViewById(R.id.gender_label);
+        TextView breedLabel = (TextView)findViewById(R.id.breed_label);
 
         addProfilePic.setTypeface(roboto);
         petInfo.setTypeface(roboto);
@@ -54,8 +59,10 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         petMale.setTypeface(roboto);
         petFemale.setTypeface(roboto);
         genderLabel.setTypeface(roboto);
+        breedLabel.setTypeface(roboto);
 
         getBirthday();
+        getBreed();
     }
 
     private void getBirthday(){
@@ -88,5 +95,16 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         if(view == petBirthday){
             datePickerDialog.show();
         }
+    }
+
+    public void getBreed(){
+        this.breeds = new String[]{"Alaskan Malamute", "American Eskimo Dog", "Beagle", "Dachshund", "English Cocker Spaniel",
+                                    "Pomeranian", "Yorkshire Terrier"};
+
+        Spinner breedSpinner = (Spinner)findViewById(R.id.breed_list);
+        ArrayAdapter<String> breedAdapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_dropdown_item, breeds);
+        breedSpinner.setAdapter(breedAdapter);
+        breedAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     }
 }
