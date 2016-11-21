@@ -11,7 +11,44 @@
     tools:context="com.example.jennykuma.peticularme.HomePage">
 
     <TextView
+        android:id="@+id/uhOh_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginTop="55dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:text="Uh oh..."
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/noProfile_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/uhOh_msg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:text="Looks like your pet doesn't have a profile!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/createProfile_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/noProfile_msg"
+        android:layout_centerHorizontal="true"
+
+        android:background="@color/colorPrimary"
+        android:text="Create a Profile"
+        android:textColor="#FFFFFF" />
+
 </RelativeLayout>
