@@ -13,7 +13,7 @@
         android:id="@+id/addPicture_rectangle"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/profpic_rectangle"/>
+        android:background="@drawable/prof_pic_rectangle"/>
 
     <TextView
         android:id="@+id/addProfPic_text"
@@ -43,7 +43,7 @@
         android:text="+"
         android:textSize="30dp"
         android:textColor="#F5F5F5"
-        android:background="@drawable/profpic_circle"
+        android:background="@drawable/prof_pic_circle"
 
         android:onClick="createProfile" />
 
