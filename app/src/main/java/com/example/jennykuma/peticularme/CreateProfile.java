@@ -69,7 +69,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         imageGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CreateProfile.this, ImageGallery.class));
+                startActivity(new Intent(CreateProfile.this, BottomSheet.class));
             }
         });
 

@@ -82,5 +82,12 @@
     <string name="show_intro">Press a thumbnail to display at larger size</string>
     <string name="title_activity_gallery_layout">GalleryLayout</string>
     <string name="title_activity_gallery_open">GalleryOpen</string>
+    <string name="title_activity_bottom_sheet">BottomSheet</string>
+    <string name="bottom_sheet">Bottom Sheet</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="print">Print</string>
+    <string name="share">Share</string>
+
 
 </resources>
