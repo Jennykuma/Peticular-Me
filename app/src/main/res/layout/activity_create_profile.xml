@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_create_profile"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.jennykuma.peticularme.CreateProfile">
-
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_create_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.jennykuma.peticularme.CreateProfile">
 
     <View
         android:id="@+id/addPicture_rectangle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/prof_pic_rectangle"/>
-
-    <TextView
-        android:id="@+id/addProfPic_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/addPicture_rectangle"
-        android:layout_toRightOf="@+id/addProfPic_btn"
-
-        android:text="Add a profile picture!"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:gravity="center" />
 
     <Button
         android:id="@+id/addProfPic_btn"
@@ -44,20 +35,19 @@
         android:textSize="30dp"
         android:textColor="#F5F5F5"
         android:background="@drawable/prof_pic_circle"
-
         android:onClick="onClickBtn" />
 
 
     <View
         android:id="@+id/rectShadow"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_below="@id/addPicture_rectangle"
+        android:layout_marginTop="150dp"
         android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/pet_info"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:paddingLeft="25dp"
 
@@ -71,26 +61,12 @@
 
     <View
         android:id="@+id/pet_info_bar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="@color/colorPrimary"
         android:layout_alignBottom="@+id/pet_info"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/pet_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pet_info"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="14dp"
-        android:layout_alignLeft="@+id/addProfPic_btn"
-        android:layout_alignStart="@+id/addProfPic_btn"
-
-        android:inputType="textPersonName"
-        android:hint="Pets Full Name" />
 
     <EditText
         android:id="@+id/pet_birthday"
@@ -121,40 +97,6 @@
         android:layout_below="@+id/pet_birthday"
         android:layout_marginTop="4dp"/>
 
-    <RadioGroup
-        android:id="@+id/pet_gender"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="15dp"
-        android:layout_below="@+id/pet_birthday"
-        android:layout_alignLeft="@+id/addProfPic_text"
-        android:layout_alignStart="@+id/addProfPic_text"
-        android:layout_marginStart="8dp">
-
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/addProfPic_text"
-            android:layout_alignStart="@+id/addProfPic_text"
-
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/pet_birthday"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-
-            android:text="Female" />
-
-    </RadioGroup>
-
     <TextView
         android:id="@+id/breed_label"
         android:layout_width="wrap_content"
@@ -171,7 +113,7 @@
 
     <Spinner
         android:id="@+id/breed_list"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_alignBottom="@+id/breed_label"
         android:layout_alignParentRight="true"
@@ -194,5 +136,69 @@
         android:inputType="textMultiLine"
 />
 
+    <TextView
+        android:id="@+id/addProfPic_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
 
-</RelativeLayout>
+        android:text="Add a profile picture!"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/addProfPic_btn"
+        android:layout_toEndOf="@+id/addProfPic_btn"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_above="@+id/pet_info" />
+
+    <EditText
+        android:id="@+id/pet_name"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+
+        android:inputType="textPersonName"
+        android:hint="Pets Full Name"
+        android:layout_below="@+id/pet_info"
+        android:layout_marginLeft="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/pet_gender"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/pet_birthday"
+        android:layout_alignLeft="@+id/breed_list"
+        android:layout_alignStart="@+id/breed_list">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pet_birthday"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/createProfile_btn"
+        android:text="Create Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pet_description"
+        android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

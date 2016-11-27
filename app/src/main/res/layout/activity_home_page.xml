@@ -39,7 +39,7 @@
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/createProfile_btn"
+        android:id="@+id/goto_createProfile_btn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -50,5 +50,15 @@
         android:background="@color/colorPrimary"
         android:text="Create a Profile"
         android:textColor="#FFFFFF" />
+
+
+    <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:layout_below="@+id/goto_createProfile_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
 
 </RelativeLayout>
