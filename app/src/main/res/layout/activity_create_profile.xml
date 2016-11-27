@@ -136,22 +136,7 @@
         android:inputType="textMultiLine"
 />
 
-    <TextView
-        android:id="@+id/addProfPic_text"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-
-        android:text="Add a profile picture!"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:gravity="center"
-        android:layout_toRightOf="@+id/addProfPic_btn"
-        android:layout_toEndOf="@+id/addProfPic_btn"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_above="@+id/pet_info" />
-
-    <EditText
+        <EditText
         android:id="@+id/pet_name"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
@@ -198,6 +183,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/pet_description"
         android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/addProfPic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Add a profile picture!"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:layout_alignBaseline="@+id/addProfPic_btn"
+            android:layout_alignBottom="@+id/addProfPic_btn"
+            android:layout_alignLeft="@+id/createProfile_btn"
+            android:layout_alignStart="@+id/createProfile_btn" />
 
     </RelativeLayout>
 
