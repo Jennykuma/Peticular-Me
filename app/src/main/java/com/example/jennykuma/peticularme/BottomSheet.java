@@ -20,7 +20,7 @@ public class BottomSheet extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bottom_sheet);
+        setContentView(R.layout.activity_profile);
     }
 
     public void openBottomSheet (View v) {

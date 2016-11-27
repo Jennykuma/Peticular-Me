@@ -88,6 +88,7 @@
     <string name="edit">Edit</string>
     <string name="print">Print</string>
     <string name="share">Share</string>
+    <string name="title_activity_no">No</string>
 
 
 </resources>
