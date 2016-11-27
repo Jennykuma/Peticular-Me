@@ -27,40 +27,17 @@
 
         android:text="Carlos Sepulveda"
         android:textSize="25dp"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimary"/>
-
-    <TextView
-        android:id="@+id/profile_gender"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-
-        android:text="Gender: Female"
-        android:textSize="18dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginStart="40dp" />
-
-    <TextView
-        android:id="@+id/profile_birthday"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-
-        android:text="Birthday: 05-12-1996"
-        android:textSize="18dp"
-        android:layout_below="@+id/profile_fullName"
-        android:layout_alignLeft="@+id/profile_gender"
-        android:layout_alignStart="@+id/profile_gender"
-        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/profile_breed"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
 
-        android:text="Breed: Pomeranian"
+        android:text="Breed:"
         android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="22dp"
         android:layout_below="@+id/profile_gender"
         android:layout_alignLeft="@+id/profile_gender"
@@ -71,8 +48,9 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
 
-        android:text="Description: Small Dog, Big Bark"
+        android:text="Description:"
         android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/profile_breed"
         android:layout_alignLeft="@+id/profile_breed"
@@ -83,13 +61,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/share"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/profile_fullName"
-        android:layout_toEndOf="@+id/profile_fullName"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="11dp"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#FFFFFF"
         android:onClick="openBottomSheet"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
+
+    <TextView
+        android:id="@+id/profile_gender"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:text="Gender:"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="57dp"
+        android:layout_marginStart="57dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/pet_gender_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Female"
+        android:textSize="18dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_alignBaseline="@+id/profile_gender"
+        android:layout_alignBottom="@+id/profile_gender"
+        android:layout_toLeftOf="@+id/share"
+        android:layout_toStartOf="@+id/share" />
+
+    <TextView
+        android:id="@+id/pet_breed_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Pomeranian"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/profile_breed"
+        android:layout_alignBottom="@+id/profile_breed"
+        android:layout_alignLeft="@+id/pet_gender_answer"
+        android:layout_alignStart="@+id/pet_gender_answer" />
+
+    <TextView
+        android:id="@+id/pet_birthday_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="05-12-1996"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/profile_birthday"
+        android:layout_alignBottom="@+id/profile_birthday"
+        android:layout_alignLeft="@+id/pet_gender_answer"
+        android:layout_alignStart="@+id/pet_gender_answer" />
+
+    <TextView
+        android:id="@+id/profile_birthday"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:text="Birthday:"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/profile_gender"
+        android:layout_alignLeft="@+id/profile_gender"
+        android:layout_alignStart="@+id/profile_gender" />
+
+    <TextView
+        android:id="@+id/pet_description_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Small dog, big bark"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/profile_description"
+        android:layout_alignBottom="@+id/profile_description"
+        android:layout_alignRight="@+id/share"
+        android:layout_alignEnd="@+id/share"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
 
 </RelativeLayout>
