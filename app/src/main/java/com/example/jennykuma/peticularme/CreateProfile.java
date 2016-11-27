@@ -61,8 +61,6 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
 
         Typeface roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
-
-        //Button imageGallery = (Button)findViewById(R.id.addProfPic_btn);
         TextView addProfilePic = (TextView)findViewById(R.id.addProfPic_text);
         TextView petInfo = (TextView)findViewById(R.id.pet_info);
 
@@ -89,12 +87,6 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         breedLabel.setTypeface(roboto);
         petDescription.setTypeface(roboto);
 
-        /*imageGallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CreateProfile.this, BottomSheet.class));
-            }
-        });*/
 
         getBirthday();
         getBreed();
