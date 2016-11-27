@@ -21,7 +21,7 @@ public class HomePage extends AppCompatActivity {
 
         TextView uhOh = (TextView)findViewById(R.id.uhOh_msg);
         TextView noProfile = (TextView)findViewById(R.id.noProfile_msg);
-        Button createProfile = (Button)findViewById(R.id.createProfile_btn);
+        Button createProfile = (Button)findViewById(R.id.goto_createProfile_btn);
         Button galleryBtn = (Button)findViewById(R.id.gallery_btn);
 
         uhOh.setTypeface(roboto);
