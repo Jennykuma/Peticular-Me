@@ -44,8 +44,8 @@
         android:textSize="30dp"
         android:textColor="#F5F5F5"
         android:background="@drawable/profpic_circle"
-
-        android:onClick="createProfile" />
+        android:onClick="onClickBtn"
+        />
 
     <View
         android:id="@+id/rectShadow"
