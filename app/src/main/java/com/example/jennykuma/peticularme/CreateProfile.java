@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.shapes.Shape;
@@ -60,7 +61,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         Typeface roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
 
 
-        Button imageGallery = (Button)findViewById(R.id.addProfPic_btn);
+        //Button imageGallery = (Button)findViewById(R.id.addProfPic_btn);
         TextView addProfilePic = (TextView)findViewById(R.id.addProfPic_text);
         TextView petInfo = (TextView)findViewById(R.id.pet_info);
 
@@ -86,12 +87,12 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         breedLabel.setTypeface(roboto);
         petDescription.setTypeface(roboto);
 
-        imageGallery.setOnClickListener(new View.OnClickListener() {
+        /*imageGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CreateProfile.this, BottomSheet.class));
             }
-        });
+        });*/
 
         getBirthday();
         getBreed();
@@ -169,13 +170,13 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            //BitmapDrawable bd = new BitmapDrawable(getResources(), imageBitmap);
+            BitmapDrawable bd = new BitmapDrawable(getResources(), imageBitmap);
             addProfPic_btn.setVisibility(View.GONE);
             addProfPic_text.setVisibility(View.GONE);
-            //addPic_rect.setBackground(bd);
-            RoundedBitmapDrawable roundDrawable = RoundedBitmapDrawableFactory.create(getResources(), imageBitmap);
-            roundDrawable.setCircular(true);
-            addPic_rect.setBackground(roundDrawable);
+            addPic_rect.setBackground(bd);
+            //RoundedBitmapDrawable roundDrawable = RoundedBitmapDrawableFactory.create(getResources(), imageBitmap);
+            //roundDrawable.setCircular(true);
+            //addPic_rect.setBackground(roundDrawable);
         }
     }
 

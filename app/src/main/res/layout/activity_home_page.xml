@@ -51,4 +51,14 @@
         android:text="Create a Profile"
         android:textColor="#FFFFFF" />
 
+
+    <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:layout_below="@+id/createProfile_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
+
 </RelativeLayout>
