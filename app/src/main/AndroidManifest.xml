@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jennykuma.peticularme">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,12 +30,38 @@
         <activity
             android:name=".CreateProfile"
             android:label="Create A Profile" />
-        <activity android:name=".Profile" />
+        <activity
+            android:name=".Profile"
+            android:label="Carlos&apos; Profile" />
         <activity android:name=".Documents" />
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".PetImages"></activity>
+        <activity android:name=".PetImages" />
+        <activity
+            android:name=".ImageGallery"
+            android:label="Image Gallery"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+     ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".GalleryLayout"
+            android:label="@string/title_activity_gallery_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GalleryOpen"
+            android:label="@string/title_activity_gallery_open"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BottomSheet"
+            android:label="@string/title_activity_bottom_sheet"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

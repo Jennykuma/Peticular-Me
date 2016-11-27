@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.shapes.Shape;
@@ -51,6 +52,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
     private TextView addProfPic_text;// = (EditText)findViewById(R.id.addProfPic_text);
     private Button addProfPic_btn;// = (Button) findViewById(R.id.addProfPic_btn);
     private View addPic_rect;
+    private View separator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +60,16 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_create_profile);
 
         Typeface roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+
+
+        //Button imageGallery = (Button)findViewById(R.id.addProfPic_btn);
+        TextView addProfilePic = (TextView)findViewById(R.id.addProfPic_text);
         TextView petInfo = (TextView)findViewById(R.id.pet_info);
 
         addProfPic_text = (TextView)findViewById(R.id.addProfPic_text);
         addProfPic_btn = (Button) findViewById(R.id.addProfPic_btn);
         addPic_rect = (View) findViewById(R.id.addPicture_rectangle);
+        separator = (View) findViewById(R.id.rectShadow);
 
         EditText petName = (EditText)findViewById(R.id.pet_name);
         EditText petBirthday = (EditText)findViewById(R.id.pet_birthday);
@@ -81,8 +88,26 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
         genderLabel.setTypeface(roboto);
         breedLabel.setTypeface(roboto);
         petDescription.setTypeface(roboto);
+
+        /*imageGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CreateProfile.this, BottomSheet.class));
+            }
+        });*/
+
         getBirthday();
         getBreed();
+
+        Button createProfile = (Button)findViewById(R.id.createProfile_btn);
+        createProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CreateProfile.this,
+                        "Profile has been created", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(CreateProfile.this, Profile.class));
+            }
+        });
     }
 
     private void getBirthday(){
@@ -160,6 +185,7 @@ public class CreateProfile extends AppCompatActivity implements View.OnClickList
             //BitmapDrawable bd = new BitmapDrawable(getResources(), imageBitmap);
             addProfPic_btn.setVisibility(View.GONE);
             addProfPic_text.setVisibility(View.GONE);
+            separator.setVisibility(View.INVISIBLE);
             //addPic_rect.setBackground(bd);
             RoundedBitmapDrawable roundDrawable = RoundedBitmapDrawableFactory.create(getResources(), imageBitmap);
             roundDrawable.setCircular(true);
