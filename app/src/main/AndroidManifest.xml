@@ -32,7 +32,7 @@
             android:label="Create A Profile" />
         <activity
             android:name=".Profile"
-            android:label="Carlos' Profile"/>
+            android:label="Carlos&apos; Profile" />
         <activity android:name=".Documents" />
         <activity
             android:name=".Settings"
@@ -61,7 +61,7 @@
         <activity
             android:name=".BottomSheet"
             android:label="@string/title_activity_bottom_sheet"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

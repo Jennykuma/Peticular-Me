@@ -1,8 +1,11 @@
 package com.example.jennykuma.peticularme;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -27,6 +30,14 @@ public class Profile extends AppCompatActivity {
         gender.setTypeface(roboto);
         breed.setTypeface(roboto);
         description.setTypeface(roboto);
+
+        Button bottomSheet = (Button)findViewById(R.id.share);
+        bottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Profile.this, BottomSheet.class));
+            }
+        });
 
     }
 }

@@ -78,19 +78,18 @@
         android:layout_alignLeft="@+id/profile_breed"
         android:layout_alignStart="@+id/profile_breed" />
 
-    <android.support.design.widget.FloatingActionButton
+    <Button
+        android:text="Share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        app:fabSize="mini"
-        app:srcCompat="@android:drawable/ic_menu_share"
+        android:id="@+id/share"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="32dp"
-        android:id="@+id/floatingActionButton3"
-        app:backgroundTint="@color/colorPrimary" />
+        android:layout_toRightOf="@+id/profile_fullName"
+        android:layout_toEndOf="@+id/profile_fullName"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:onClick="openBottomSheet"
+        />
 
 </RelativeLayout>
