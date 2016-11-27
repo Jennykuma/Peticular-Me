@@ -58,10 +58,6 @@
             android:name=".GalleryOpen"
             android:label="@string/title_activity_gallery_open"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BottomSheet"
-            android:label="@string/title_activity_bottom_sheet"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
