@@ -21,7 +21,8 @@ public class HomePage extends AppCompatActivity {
 
         TextView uhOh = (TextView)findViewById(R.id.uhOh_msg);
         TextView noProfile = (TextView)findViewById(R.id.noProfile_msg);
-        Button createProfile = (Button)findViewById(R.id.createProfile_btn);
+        Button createProfile = (Button)findViewById(R.id.goto_createProfile_btn);
+        Button galleryBtn = (Button)findViewById(R.id.gallery_btn);
 
         uhOh.setTypeface(roboto);
         noProfile.setTypeface(roboto);
@@ -31,6 +32,13 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomePage.this, CreateProfile.class));
+            }
+        });
+
+        galleryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, ImageGallery.class));
             }
         });
     }
