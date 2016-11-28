@@ -17,7 +17,7 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Backup"
+        android:text="Share via E-mail"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Detail"
+        android:text="Share via Facebook"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Open"
+        android:text="Share via MMS"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:drawablePadding="15dp"
         android:gravity="center_vertical"
         android:padding="15dp"
-        android:text="Uninstall"
+        android:text="Share via Twitter"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

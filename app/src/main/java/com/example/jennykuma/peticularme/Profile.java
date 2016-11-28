@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -67,7 +68,12 @@ public class Profile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(Profile.this,"Clicked Facebook",Toast.LENGTH_SHORT).show();
+                Dialog settingsDialog = new Dialog(Profile.this);
+                settingsDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+                settingsDialog.setContentView(getLayoutInflater().inflate(R.layout.image_layout
+                        , null));
+                settingsDialog.show();
+
                 mBottomSheetDialog.dismiss();
             }
         });
