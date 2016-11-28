@@ -29,12 +29,21 @@ public class Profile extends AppCompatActivity {
         TextView gender = (TextView)findViewById(R.id.profile_gender);
         TextView breed = (TextView)findViewById(R.id.profile_breed);
         TextView description = (TextView)findViewById(R.id.profile_description);
+        TextView birthday_answer = (TextView)findViewById(R.id.pet_birthday_answer);
+        TextView gender_answer = (TextView)findViewById(R.id.pet_gender_answer);
+        TextView breed_answer = (TextView)findViewById(R.id.pet_breed_answer);
+        TextView description_ansr = (TextView)findViewById(R.id.pet_description_answer);
 
         fullName.setTypeface(roboto);
         birthday.setTypeface(roboto);
         gender.setTypeface(roboto);
         breed.setTypeface(roboto);
         description.setTypeface(roboto);
+        birthday_answer.setTypeface(roboto);
+        gender_answer.setTypeface(roboto);
+        breed_answer.setTypeface(roboto);
+        description_ansr.setTypeface(roboto);
+
     }
 
     public void openBottomSheet (View v) {

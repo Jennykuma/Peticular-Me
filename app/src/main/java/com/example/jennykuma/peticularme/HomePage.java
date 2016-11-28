@@ -38,7 +38,7 @@ public class HomePage extends AppCompatActivity {
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomePage.this, ImageGallery.class));
+                startActivity(new Intent(HomePage.this, GalleryLayout.class));
             }
         });
     }
