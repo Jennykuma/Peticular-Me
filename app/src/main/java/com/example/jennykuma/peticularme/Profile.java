@@ -1,13 +1,17 @@
 package com.example.jennykuma.peticularme;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -67,7 +71,26 @@ public class Profile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(Profile.this,"Clicked Facebook",Toast.LENGTH_SHORT).show();
+                Dialog settingsDialog = new Dialog(Profile.this);
+                settingsDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+                settingsDialog.setContentView(getLayoutInflater().inflate(R.layout.image_layout
+                        , null));
+                /*button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(Profile.this,
+                                "Shared", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                button2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(Profile.this,
+                                "Canceled", Toast.LENGTH_SHORT).show();
+                    }
+                });*/
+                settingsDialog.show();
+
                 mBottomSheetDialog.dismiss();
             }
         });
